@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 c2d7208bfae9cbcec365feace868859be440f32f eleven11-git <cp57cp57@gmail.com> 1601232536 +0200	clone: from https://github.com/ChrisNextGateTech/DevNextGateTechTest.git
+c2d7208bfae9cbcec365feace868859be440f32f fac56f0a28695bde2c8e0ca5c5bed1fbaa93ff46 eleven11-git <chr.pask@gmail.com> 1601232673 +0200	commit: First commit
+fac56f0a28695bde2c8e0ca5c5bed1fbaa93ff46 c2d7208bfae9cbcec365feace868859be440f32f eleven11-git <cp57cp57@gmail.com> 1601232805 +0200	reset: moving to c2d7208bfae9cbcec365feace868859be440f32f
+c2d7208bfae9cbcec365feace868859be440f32f 3873b18b2810dd92f64727716cfc9f48715e59e6 eleven11-git <cp57cp57@gmail.com> 1601232824 +0200	commit (amend): Initial commit
+3873b18b2810dd92f64727716cfc9f48715e59e6 c2d7208bfae9cbcec365feace868859be440f32f eleven11-git <cp57cp57@gmail.com> 1601232876 +0200	undo: commit (amend): Initial commit
+c2d7208bfae9cbcec365feace868859be440f32f fac56f0a28695bde2c8e0ca5c5bed1fbaa93ff46 eleven11-git <cp57cp57@gmail.com> 1601232878 +0200	undo: reset: moving to c2d7208bfae9cbcec365feace868859be440f32f [2e5acd08b5e8446151093dfd3e004489ceda38e6]
