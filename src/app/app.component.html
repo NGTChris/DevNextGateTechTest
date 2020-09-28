@@ -1,14 +1,89 @@
-<h1>{{title}}</h1>
+<div class="container-fluid">
+  <br>
+  <div class="ngt_title">
+    <h1>{{title}}</h1>
+  </div>
+  <br>
+  <br>
 
-<h2>Content from Firebase</h2>
 
-<div style="width: 300px;">
-  <form (ngSubmit)="onSubmit()">
-    <label for="item">Item</label>
-    <input type="text" placeholder="Enter content..." id="item" required [(ngModel)]="itemValue" name="item">
-  </form>
+
+
+<!-- ========== TABLE ============================================================ -->
+  
+<h2>Local fake data</h2>
+
+<div class="mat-elevation-z8">
+  
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- index Column -->
+    <ng-container matColumnDef="index">
+      <th mat-header-cell *matHeaderCellDef> Index </th>
+      <td mat-cell *matCellDef="let element"> {{element.index}} </td>
+    </ng-container>
+
+    <!-- fund_name Column -->
+    <ng-container matColumnDef="fund_name">
+      <th mat-header-cell *matHeaderCellDef> Fund Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.fund_name}} </td>
+    </ng-container>
+
+    <!-- subfund_name Column -->
+    <ng-container matColumnDef="subfund_name">
+      <th mat-header-cell *matHeaderCellDef> Subfund Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.subfund_name}} </td>
+    </ng-container>
+
+    <!-- share_class_name Column -->
+    <ng-container matColumnDef="share_class_name">
+      <th mat-header-cell *matHeaderCellDef> Share Class Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.share_class_name}} </td>
+    </ng-container>
+
+    <!-- date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <!-- report_status Column -->
+    <ng-container matColumnDef="report_status">
+      <th mat-header-cell *matHeaderCellDef> Report Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.report_status}} </td>
+    </ng-container>
+
+    <!-- nb_alerts Column -->
+    <ng-container matColumnDef="nb_alerts">
+    <th mat-header-cell *matHeaderCellDef> Nb Alerts </th>
+      <td mat-cell *matCellDef="let element"> {{element.nb_alerts}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
 </div>
 
-<ul>
-  <li *ngFor="let item of items" | async>{{item.content}}</li>
-</ul>
+<!-- ========== END TABLE ============================================================ -->
+
+
+  <br>
+  <br>
+  <h2>Content from Firebase</h2>
+  <div>
+    <table class="mat-table" width="100%">
+      <tr class="mat-row" *ngFor="let item of items | async">
+        <td class="mat-cell">{{item.index}}</td>
+        <td class="mat-cell">{{item.fund_name}}</td>
+        <td class="mat-cell">{{item.subfund_name}}</td>
+        <td class="mat-cell">{{item.share_class_name}}</td>
+        <td class="mat-cell">{{item.date}}</td>
+        <td class="mat-cell">{{item.report_status}}</td>
+        <td class="mat-cell">{{item.nb_alerts}}</td>
+      </tr>
+    </table>
+  </div>
+ 
+</div>
