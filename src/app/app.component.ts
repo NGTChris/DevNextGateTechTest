@@ -72,12 +72,12 @@ const ELEMENT_DATA: FirebaseData[] = [
 export class AppComponent implements AfterViewInit {
   title = 'Dev Next Gate Tech Firebase Test';
 
-  displayedColumns: string[] = ['index', 'fund_name', 'subfund_name', 'share_class_name', 'date', 'report_status', 'nb_alerts'];
-  dataSource = new MatTableDataSource<FirebaseData>(ELEMENT_DATA);
-
   itemValue = '';
   items: Observable<any[]>;
  
+  displayedColumns: string[] = ['index', 'fund_name', 'subfund_name', 'share_class_name', 'date', 'report_status', 'nb_alerts'];
+  dataSource = new MatTableDataSource<FirebaseData>(ELEMENT_DATA);
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(public db: AngularFireDatabase) {

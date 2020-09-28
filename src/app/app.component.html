@@ -11,7 +11,7 @@
 
 <!-- ========== TABLE ============================================================ -->
   
-<h2>Local fake data</h2>
+<h2>1 - Local fake data</h2>
 
 <div class="mat-elevation-z8">
   
@@ -71,9 +71,19 @@
 
   <br>
   <br>
-  <h2>Content from Firebase</h2>
+  <h2>2 - Content from Firebase - Extract</h2>
   <div>
     <table class="mat-table" width="100%">
+      <tr class="mat-row ngt-mat-header-row">
+        <td>Index</td>
+        <td>Fund Name</td>
+        <td>Subfund Name</td>
+        <td>Share Class Name</td>
+        <td>Date</td>
+        <td>Report Status</td>
+        <td>Nb Alerts</td>
+
+      </tr>
       <tr class="mat-row" *ngFor="let item of items | async">
         <td class="mat-cell">{{item.index}}</td>
         <td class="mat-cell">{{item.fund_name}}</td>

@@ -1,5 +1,9 @@
+h1 {
+    margin: 8px;
+}
+
 .ngt_title {
-    background-color: #ccc;
+    background-color: #ddd;
     padding: 10px;
 }
 
@@ -7,6 +11,28 @@ table {
     width: 100%;
 }
 
+.mat-paginator, tr {
+    background-color: #343a40;
+}
+
+.ngt-mat-header-row {
+    padding-right: 24px;
+    height: 56px;;
+    border-bottom-color: rgba(255,255,255,.12);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    color: #fff;
+    td {
+        background-color: #343a40;
+        font-size: 12px;;
+    }
+}
+
 td {
     width: 15%;
+    background-color: #666;
+    &:first-child {
+        padding-left: 24px;
+    }
 }
+
